@@ -10,13 +10,13 @@ An automatic api documentation generator for Laravel applications.
 You can either add the package directly by firing this command
 
 ```
-$ composer require rabblerouser/api-autodoc:~0.0.*
+$ composer require rabblerouser/api-autodoc:~0.0.5
 ```
 
 Or add in the `require` key of `composer.json` file manually
 
 ```
-"rabblerouser/api-autodoc": "~0.0.*"
+"rabblerouser/api-autodoc": "~0.0.5"
 ```
 
 And Run the Composer update command
