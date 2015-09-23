@@ -1,0 +1,25 @@
+{
+  "name": "rabblerouser/api-autodoc",
+  "description": "An automatic API documentation creation utility.",
+  "keywords": ["api", "webservice", "documentation"],
+  "license": "MIT",
+  "homepage": "http://rabbleandrouser.com",
+  "authors": [
+    {
+      "name": "Chad Beninati",
+      "email": "chad.beninati@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RabbleRouser\\ApiAutoDoc\\": "src/"
+    }
+  },
+  "require": {
+    "illuminate/support": "5.1.*",
+    "irazasyed/larasupport": "~1.0"
+  },
+  "config": {
+    "preferred-install": "dist"
+  }
+}
