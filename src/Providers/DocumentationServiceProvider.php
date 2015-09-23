@@ -18,7 +18,7 @@ class DocumentationServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'api-autodoc');
         $this->publishes([
-            __DIR__.'/../../resources/views' => base_path('resources/views/rabblerouser/api-autodoc'),
+            __DIR__.'/../../resources/views' => base_path('resources/views/vendor/api-autodoc'),
         ]);
     }
 

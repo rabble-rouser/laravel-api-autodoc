@@ -1,4 +1,4 @@
-@extends('layouts.docs')
+@extends('api-autodoc::layouts.docs')
 
 @section('content')
 
