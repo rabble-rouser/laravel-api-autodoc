@@ -14,12 +14,15 @@ class DocumentationServiceProvider extends ServiceProvider
     public function boot()
     {
         $app = $this->app; // Set this to use $app->get() in the routes.
-        require __DIR__.'/../Http/routes.php';
+        require __DIR__ . '/../Http/routes.php';
 
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'api-autodoc');
         $this->publishes([
-            __DIR__.'/../../resources/views' => base_path('resources/views/vendor/api-autodoc'),
+            __DIR__ . '/../../resources/views' => base_path('resources/views/vendor/api-autodoc'),
         ]);
+        $this->publishes([
+            __DIR__ . '/../../public/assets' => public_path('vendor/api-autodoc'),
+        ], 'public');
     }
 
     /**

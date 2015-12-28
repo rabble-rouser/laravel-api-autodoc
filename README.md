@@ -13,7 +13,9 @@ You can either add the package directly by firing this command
 $ composer require rabblerouser/api-autodoc:~0.0.5
 ```
 
-Or add in the `require` key of `composer.json` file manually
+-- or --
+
+Add in the `require` key of `composer.json` file manually
 
 ```
 "rabblerouser/api-autodoc": "~0.0.5"
@@ -46,7 +48,7 @@ Add the following service providers to your `config/app.php` file.
 ],
 ```
 
-#### (Optional) Override Doc View Templates
+#### Override Doc View Templates
 
 If you want to override the default view templates, run the artisan `publish` command.
 
