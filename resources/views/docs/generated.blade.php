@@ -15,16 +15,11 @@
                     <div class="panel-body">
                         @foreach($category as $action)
                             <div class="action-section">
-                                <h3 class="sub-header">{{ $action['uri'] }}</h3>
+                                <div class="clearfix">
+                                    <span class="sub-header col-sm-11">{{ $action['uri'] }}</span>
+                                    <span class="method col-sm-1">{{ $action['method'] }}</span>
+                                </div>
                                 <h4 class="file_name">{{ $action['action']['uses'] }}</h4>
-                                <span class="method">{{ $action['method'] }}</span>
-
-                                <span class="test-url" >
-                                    test url:
-                                    <span id="test-url-{{ $action['unique_id'] }}" data-test_url="{{ app('url')->to($action['uri']) }}">
-                                        {{ app('url')->to($action['uri']) }}
-                                    </span>
-                                </span>
 
                                 <form data-target="response-{{ $action['unique_id'] }}" class="test-response-form" action="{{ url($action['uri']) }}" data-unique_id="{{ $action['unique_id'] }}">
                                     @foreach( $action['parameters'] as $parameter)
@@ -38,6 +33,14 @@
                                 </form>
 
                                 <div id="response-{{ $action['unique_id'] }}" class="api-response-area">
+
+                                    <span class="test-url" >
+                                        <span class="test-url--label">test url:</span>
+                                        <span id="test-url-{{ $action['unique_id'] }}" data-test_url="{{ app('url')->to($action['uri']) }}">
+                                            {{ app('url')->to($action['uri']) }}
+                                        </span>
+                                    </span>
+
                                     <pre class="api-response-area-content"></pre>
                                 </div>
                             </div> <!-- action-section -->

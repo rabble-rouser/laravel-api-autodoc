@@ -54,20 +54,26 @@ a.api_link {
     display: block;
 }
 
+.sub-header {
+    padding: 6px 10px;
+    font-size: 14pt;
+}
+
 .method {
     background-color: #269abc;
     color: white;
+    font-weight: bold;
     border-radius: 4px;
     padding: 6px;
     margin: 8px 0px;
-    display: block;
+    text-align: center;
 }
 
 .action-section {
     border-bottom: 2px solid #eee;
     margin-left: -15px;
     margin-right: -15px;
-    padding: 15px;
+    padding: 5px 15px;
 }
 
 .api-response-area {
@@ -80,7 +86,11 @@ a.api_link {
     border-radius: 4px;
     display: block;
     background-color: #f9f9f9;
-    margin-bottom: 8px;
+    margin: 8px 0px;
+}
+
+.test-url--label {
+    font-weight: bold;
 }
 
 /* ======== Bootstrap Overrides ======== */
