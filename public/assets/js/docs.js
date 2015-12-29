@@ -31,6 +31,12 @@ $('.hide-results').on('click', function(event){
     $("#" + target).hide();
 });
 
+$('.top-menu--dev-info--toggle-dev-info').on('click', function(event){
+    event.preventDefault();
+
+    $('.dev-info').toggle();
+});
+
 function syntaxHighlight(json) {
     json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 

@@ -9,7 +9,8 @@
     <title>API Documentation</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha256-obxCG8hWR3FEKvV19p/G6KgEYm1v/u1FnRTS7Bc4Ii8= sha512-8Xs5FuWgtHH1JXye8aQcxVEtLqozJQAu8nhPymuRqeEslT6nJ2OgEYeS3cKiXasOVxYPN80DDoOTKWgOafU1LQ==" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ url('vendor/api-autodoc/styles/dashboard.css') }}" rel="stylesheet">
@@ -33,6 +34,14 @@
 </nav>
 
 <div class="container-fluid">
+    <div class="row top-menu">
+        <div class="col-sm-9">
+
+        </div>
+        <div class="col-sm-3 top-menu--dev-info">
+            <a href="#" class="top-menu--dev-info--toggle-dev-info"><i class="fa fa-info"></i> Toggle Dev Info</a>
+        </div>
+    </div>
     <div class="row">
         <div class="col-sm-12 main">
             @yield('content')

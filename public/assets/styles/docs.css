@@ -18,7 +18,34 @@ pre {
     color: red;
 }
 
+/* ======== Page Elements ======== */
+.top-menu {
+    padding: 3px 8px;
+    color: white;
+    background-color: #333;
+    border-bottom: 1px solid #111;
+}
+
+.top-menu--dev-info {
+    text-align: right;
+}
+
+.top-menu--dev-info--toggle-dev-info {
+    color: #F0C828;
+}
+
+.top-menu--dev-info--toggle-dev-info:hover {
+    text-decoration: none;
+}
+
 /* ======== API Elements ======== */
+.dev-info {
+    display: none;
+    color: #F0C828;
+    border-left: 8px solid #F0C828;
+    border-right: 8px solid #F0C828;
+}
+
 .super {
     top: -0.5em;
     font-size: 75%;
@@ -76,6 +103,10 @@ a.api_link {
     padding: 5px 15px;
 }
 
+.action-section--label {
+    font-weight: bold;
+}
+
 .api-response-area {
     display: none;
 }
@@ -93,6 +124,15 @@ a.api_link {
     font-weight: bold;
 }
 
+.test-response-form--label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.test-response-form--parameters {
+    padding: 2px 8px;
+}
+
 /* ======== Bootstrap Overrides ======== */
 .panel-heading {
     padding: 6px 10px;
@@ -104,4 +144,9 @@ a.api_link {
 
 h3 {
     font-size: 20px;
+}
+
+hr.small {
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
