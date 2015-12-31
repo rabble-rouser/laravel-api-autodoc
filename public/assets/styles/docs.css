@@ -82,18 +82,34 @@ a.api_link {
 }
 
 .sub-header {
-    padding: 6px 10px;
+    padding: 6px 10px 0 10px;
     font-size: 14pt;
 }
 
 .method {
-    background-color: #269abc;
     color: white;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 0 4px 4px 0;
     padding: 6px;
-    margin: 8px 0px;
     text-align: center;
+}
+
+.sub-header__POST {
+    border-bottom: 2px solid #269abc;
+}
+
+.sub-header__GET {
+    border-bottom: 2px solid #4cae4c;
+}
+
+.method__POST {
+    background-color: #269abc;
+    border-bottom: 3px solid #269abc;
+}
+
+.method__GET {
+    background-color: #4cae4c;
+    border-bottom: 3px solid #4cae4c;
 }
 
 .action-section {

@@ -20,8 +20,8 @@
 
                                 <span class="action-section--label clearfix">route: </span>
                                 <div class="clearfix">
-                                    <span class="sub-header col-sm-11">{{ $action['uri'] }}</span>
-                                    <span class="method col-sm-1">{{ $action['method'] }}</span>
+                                    <span class="sub-header sub-header__{{$action['method'] }} col-sm-11">{{ $action['uri'] }}</span>
+                                    <span class="method method__{{$action['method'] }} col-sm-1">{{ $action['method'] }}</span>
                                 </div>
                                 <hr class="small" />
 
