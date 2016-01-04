@@ -4,17 +4,26 @@ $('.test-response-form').on('submit', function(event){
     var target      = $(this).data('target');
     var parameters  = $(this).serializeArray();
     var url         = $(this).attr('action');
+    var method      = $(this).attr('method');
 
     var unique_id   = $(this).data('unique_id');
 
-    // Inject form values as url parameters.
-    $.each(parameters, function(key, value){
-        url = url.replace("{" + value.name + "}", value.value);
-    });
+    if(method == 'GET') {
+        // Inject form values as url parameters.
+        $.each(parameters, function(key, value){
+            url = url.replace("{" + value.name + "}", value.value);
+        });
+    }
 
-    $.get(url, function(data) {
-        $("#" + target + " .api-response-area-content").html( syntaxHighlight( JSON.stringify(data , undefined, 4) ) );
-    });
+    $.ajax({
+            'method': method,
+            'url': url,
+            'data': parameters
+        }).done(
+        function(data) {
+            $("#" + target + " .api-response-area-content").html( syntaxHighlight( JSON.stringify(data , undefined, 4) ) );
+        }
+    );
 
     // Update the test link with the new params.
     var test_link = "<a href='" + url + "' target='_blank'>" + url + "</a>";
