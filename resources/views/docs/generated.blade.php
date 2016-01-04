@@ -25,7 +25,7 @@
                                 </div>
                                 <hr class="small" />
 
-                                <form data-target="response-{{ $action['unique_id'] }}" class="test-response-form" action="{{ url($action['uri']) }}" data-unique_id="{{ $action['unique_id'] }}">
+                                <form method="{{$action['method'] }}" data-target="response-{{ $action['unique_id'] }}" class="test-response-form" action="{{ url($action['uri']) }}" data-unique_id="{{ $action['unique_id'] }}">
                                     @if(count($action['parameters']) > 0)
                                         <span class="test-response-form--label clearfix">parameters: </span>
 

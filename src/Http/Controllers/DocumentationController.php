@@ -13,7 +13,7 @@ class DocumentationController
         foreach ($routeCollection as $route) {
 
             $action = $route['action'];
-            // Only render the routes with a 'docCategory'.
+            // Only render the routes that have a 'docCategory'.
             if(is_array($action) && array_key_exists('docCategory', $action))
             {
                 $route['unique_id']     = $this->createUniqueIDForRouteActionWithMethod($action, $route['method']);
@@ -38,8 +38,8 @@ class DocumentationController
         // The results will be the uri's parameters.
         preg_match_all('/{(.*?)}/', $uri, $parameters);
 
-        // Return values at index, "1". These are
-        // the string values without the "{}".
+        // Return the parameters at index "1". These
+        // are strings without the "{}" wrappers.
         return $parameters[1];
     }
 
