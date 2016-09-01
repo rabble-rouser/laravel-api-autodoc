@@ -60,6 +60,6 @@
                 </div>
             </div>
         @endforeach
-    </div> <!-- accordian -->
+    </div> <!-- accordion -->
 
 @endsection
